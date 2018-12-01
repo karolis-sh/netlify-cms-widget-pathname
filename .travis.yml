@@ -12,3 +12,8 @@ node_js:
 script:
   - npm run build
   - npm run qa
+after_success:
+  - npm run travis-deploy-once "npm run semantic-release"
+branches:
+  except:
+    - /^v\d+\.\d+\.\d+$/
