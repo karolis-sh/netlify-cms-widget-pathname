@@ -3,6 +3,8 @@ node_modules
 *.log*
 
 # Build products
+/lib
+/public
 
 # other
 .vscode

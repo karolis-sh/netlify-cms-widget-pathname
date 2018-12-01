@@ -2,8 +2,11 @@
 !*.js
 !*.json
 !*.md
+!.babelrc
 
 # Build products
+/lib
+/public
 
 # npm files
 node_modules
