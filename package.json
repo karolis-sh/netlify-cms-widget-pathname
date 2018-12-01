@@ -1,0 +1,61 @@
+{
+  "name": "netlify-cms-widget-pathname",
+  "version": "0.0.0",
+  "description": "",
+  "keywords": [
+    "netlify",
+    "netlify-cms",
+    "cms",
+    "widget",
+    "pathname",
+    "url"
+  ],
+  "homepage": "https://github.com/buz-zard/netlify-cms-widget-pathname#readme",
+  "bugs": {
+    "url": "https://github.com/buz-zard/netlify-cms-widget-pathname/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/buz-zard/netlify-cms-widget-pathname.git"
+  },
+  "license": "MIT",
+  "author": "Karolis Šarapnickis",
+  "main": "index.js",
+  "scripts": {
+    "lint": "run-p lint:*",
+    "lint:js": "eslint .",
+    "lint:md": "markdownlint *.md -i node_modules",
+    "format": "prettier --write '**/*.*' && sort-package-json",
+    "upgrade-interactive": "npm-check --update"
+  },
+  "config": {
+    "commitizen": {
+      "path": "cz-conventional-changelog"
+    }
+  },
+  "devDependencies": {
+    "@k.sh/eslint-config": "^1.6.0",
+    "cz-conventional-changelog": "^2.1.0",
+    "husky": "^1.2.0",
+    "lint-staged": "^8.1.0",
+    "markdownlint": "^0.11.0",
+    "npm-check": "^5.9.0",
+    "npm-run-all": "^4.1.5",
+    "prettier": "^1.15.3",
+    "pretty-quick": "^1.8.0",
+    "sort-package-json": "^1.16.0"
+  },
+  "lint-staged": {
+    "package.json": [
+      "sort-package-json",
+      "git add"
+    ],
+    "*.js": [
+      "eslint --fix",
+      "git add"
+    ],
+    "*.{md,json}": [
+      "pretty-quick --staged"
+    ]
+  }
+}
