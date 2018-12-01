@@ -84,4 +84,4 @@ or ask the Netlify CMS community in [Gitter](https://gitter.im/netlify/netlifycm
 [code-style-badge]: https://img.shields.io/badge/code_style-prettier-ff69b4.svg
 [code-style]: https://github.com/prettier/prettier
 [module-formats-badge]: https://img.shields.io/badge/module%20formats-cjs-green.svg
-[unpkg-bundle]: https://unpkg.com/redux-cached-api-middleware/lib/
+[unpkg-bundle]: https://unpkg.com/netlify-cms-widget-pathname/lib/
