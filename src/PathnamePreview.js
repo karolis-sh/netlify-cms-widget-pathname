@@ -18,22 +18,24 @@ export default function PathnamePreview({ value, ...props }) {
             fontFamily: fonts.primary,
             border: `2px solid ${colorsRaw.grayLight}`,
             borderRadius: '5px',
-            display: 'inline-block',
+            display: 'inline-flex',
+            alignItems: 'stretch',
             margin: '4px 0',
           }}
         >
-          <span
+          <div
             className="netlify-cms-widget-pathname-preview__label"
             style={{
               color: colorsRaw.grayDark,
               background: colorsRaw.grayLight,
               padding: '2px 8px',
-              display: 'inline-block',
               fontSize: '.9em',
+              display: 'flex',
+              alignItems: 'center',
             }}
           >
-            URL
-          </span>
+            <span>URL</span>
+          </div>
           <a
             href={url}
             target="_blank"
@@ -43,6 +45,7 @@ export default function PathnamePreview({ value, ...props }) {
               color: colorsRaw.blue,
               textDecoration: 'none',
               padding: '0 8px',
+              wordBreak: 'break-all',
             }}
           >
             {url}
