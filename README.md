@@ -1,16 +1,16 @@
 # netlify-cms-widget-pathname
 
-[Check out a demo!](https://netlify-cms-widget-pathname.netlify.com/demo)
+[Check out the demo!](https://netlify-cms-widget-pathname.netlify.com/demo)
 
-This widget provider pathname validation and url preview. This might be handy if
+This widget provides pathname validation and url preview. This might be handy if
 you construct url's based on input field.
 
 [![npm version][version-badge]][version]
 [![Build Status][build-badge]][build]
+[![module formats: cjs][module-formats-badge]][unpkg-bundle]
 [![License: MIT][license-badge]][license]
 
 [![semantic-release][semantic-release-badge]][semantic-release]
-[![module formats: cjs][module-formats-badge]][unpkg-bundle]
 [![code style: prettier][code-style-badge]][code-style]
 
 ![preview](docs/preview.png)
