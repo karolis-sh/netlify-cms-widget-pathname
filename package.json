@@ -65,6 +65,7 @@
     "lint-staged": "^8.1.0",
     "markdownlint-cli": "^0.13.0",
     "netlify-cms": "^2.2.1",
+    "netlify-cms-ui-default": "^2.1.1",
     "netlify-cms-widget-string": "^2.0.4",
     "npm-check": "^5.9.0",
     "npm-run-all": "^4.1.5",
@@ -83,6 +84,7 @@
     "webpack-serve": "^2.0.3"
   },
   "peerDependencies": {
+    "netlify-cms-ui-default": "^2",
     "netlify-cms-widget-string": "^2",
     "prop-types": "^15",
     "react": "^16"

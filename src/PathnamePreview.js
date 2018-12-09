@@ -1,6 +1,7 @@
-import PropTypes from 'prop-types';
 import React from 'react';
+import PropTypes from 'prop-types';
 import { StringPreview } from 'netlify-cms-widget-string';
+import { fonts, colorsRaw } from 'netlify-cms-ui-default';
 
 export default function PathnamePreview({ value, ...props }) {
   const { field } = props;
@@ -12,20 +13,20 @@ export default function PathnamePreview({ value, ...props }) {
       {...props}
       value={
         <span
-          className="netlify-cms-widget-pathname__preview"
+          className="netlify-cms-widget-pathname-preview"
           style={{
-            fontFamily:
-              '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"',
-            border: '2px solid rgb(223, 223, 227)',
+            fontFamily: fonts.primary,
+            border: `2px solid ${colorsRaw.grayLight}`,
             borderRadius: '5px',
             display: 'inline-block',
             margin: '4px 0',
           }}
         >
           <span
+            className="netlify-cms-widget-pathname-preview__label"
             style={{
-              color: 'rgb(122, 130, 145)',
-              background: 'rgb(223, 223, 227)',
+              color: colorsRaw.grayDark,
+              background: colorsRaw.grayLight,
               padding: '2px 8px',
               display: 'inline-block',
               fontSize: '.9em',
@@ -37,8 +38,9 @@ export default function PathnamePreview({ value, ...props }) {
             href={url}
             target="_blank"
             rel="noopener noreferrer"
+            className="netlify-cms-widget-pathname-preview__link"
             style={{
-              color: '#007BE6',
+              color: colorsRaw.blue,
               textDecoration: 'none',
               padding: '0 8px',
             }}
