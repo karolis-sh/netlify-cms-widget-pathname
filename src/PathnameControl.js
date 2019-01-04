@@ -1,7 +1,8 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { StringControl } from 'netlify-cms-widget-string';
 
-class PathnameControl extends React.Component {
+export default class PathnameControl extends React.Component {
   isValid = () => {
     const { value } = this.props;
     if (!value) return true;
@@ -15,4 +16,6 @@ class PathnameControl extends React.Component {
   }
 }
 
-export default PathnameControl;
+PathnameControl.propTypes = {
+  value: PropTypes.node,
+};

@@ -32,14 +32,14 @@ const config = {
             },
             {
               name: 'pathname_2',
-              label: `Pathname - with url_prefix: /blog`,
+              label: 'Pathname - with url_prefix: /blog',
               widget: 'pathname',
               required: false,
               url_prefix: '/blog',
             },
             {
               name: 'pathname_3',
-              label: `Pathname - with url_origin: https://github.com`,
+              label: 'Pathname - with url_origin: https://github.com',
               widget: 'pathname',
               required: false,
               url_origin: 'https://github.com',
