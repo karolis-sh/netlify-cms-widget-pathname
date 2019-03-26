@@ -1,5 +1,5 @@
 import './bootstrap';
-import CMS, { init } from 'netlify-cms';
+import { registerWidget, init } from 'netlify-cms';
 import 'netlify-cms/dist/cms.css';
 import { PathnameControl, PathnamePreview } from '../src';
 
@@ -51,6 +51,6 @@ const config = {
   ],
 };
 
-CMS.registerWidget('pathname', PathnameControl, PathnamePreview);
+registerWidget('pathname', PathnameControl, PathnamePreview);
 
 init({ config });
