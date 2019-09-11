@@ -70,13 +70,13 @@ MIT
 
 ## Support
 
-For help with this widget, open an [issue](https://github.com/buz-zard/netlify-cms-widget-pathname)
+For help with this widget, open an [issue](https://github.com/karolis-sh/netlify-cms-widget-pathname)
 or ask the Netlify CMS community in [Gitter](https://gitter.im/netlify/netlifycms).
 
 [version-badge]: https://badge.fury.io/js/netlify-cms-widget-pathname.svg
 [version]: https://www.npmjs.com/package/netlify-cms-widget-pathname
-[build-badge]: https://travis-ci.org/buz-zard/netlify-cms-widget-pathname.svg?branch=master
-[build]: https://travis-ci.org/buz-zard/netlify-cms-widget-pathname
+[build-badge]: https://travis-ci.org/karolis-sh/netlify-cms-widget-pathname.svg?branch=master
+[build]: https://travis-ci.org/karolis-sh/netlify-cms-widget-pathname
 [license-badge]: https://img.shields.io/badge/License-MIT-yellow.svg
 [license]: https://opensource.org/licenses/MIT
 [semantic-release-badge]: https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg

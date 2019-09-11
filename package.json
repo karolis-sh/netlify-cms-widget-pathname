@@ -10,13 +10,13 @@
     "url",
     "widget"
   ],
-  "homepage": "https://github.com/buz-zard/netlify-cms-widget-pathname#readme",
+  "homepage": "https://github.com/karolis-sh/netlify-cms-widget-pathname#readme",
   "bugs": {
-    "url": "https://github.com/buz-zard/netlify-cms-widget-pathname/issues"
+    "url": "https://github.com/karolis-sh/netlify-cms-widget-pathname/issues"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/buz-zard/netlify-cms-widget-pathname.git"
+    "url": "git+https://github.com/karolis-sh/netlify-cms-widget-pathname.git"
   },
   "license": "MIT",
   "author": "Karolis Šarapnickis",
