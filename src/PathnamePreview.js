@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import { WidgetPreviewContainer, fonts, colorsRaw } from 'netlify-cms-ui-default';
 
 export default function PathnamePreview({ value, ...props }) {
+  if (!value) return null;
   const { field } = props;
   const urlOrigin = field.get('url_origin') || window.location.origin;
   const urlPrefix = field.get('url_prefix') || '';
