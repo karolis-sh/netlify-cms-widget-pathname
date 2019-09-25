@@ -17,7 +17,7 @@ export default function PathnamePreview({ value, ...props }) {
           border: `2px solid ${colorsRaw.grayLight}`,
           borderRadius: '5px',
           display: 'inline-flex',
-          alignItems: 'stretch',
+          alignItems: 'baseline',
           margin: '4px 0',
         }}
       >
