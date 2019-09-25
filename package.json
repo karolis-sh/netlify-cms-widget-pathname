@@ -32,7 +32,7 @@
     "lint:md": "markdownlint README.md",
     "qa": "npm run lint",
     "semantic-release": "semantic-release",
-    "start": "webpack-dev-server --config webpack.dev.config.js",
+    "start": "webpack-dev-server --config webpack.dev.config.js --https",
     "try-demo": "run-s clean build:demo && serve public",
     "upgrade-interactive": "npm-check --update"
   },
