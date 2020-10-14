@@ -2,10 +2,6 @@
 node_modules
 *.log*
 
-# Build products
+# project
 /lib
 /public
-
-# other
-.vscode
-*.*~

@@ -26,7 +26,7 @@ export default class PathnameControl extends React.Component {
         id={forID}
         className={classNameWrapper}
         value={value || ''}
-        onChange={e => onChange(e.target.value)}
+        onChange={(e) => onChange(e.target.value)}
         onFocus={setActiveStyle}
         onBlur={setInactiveStyle}
       />
