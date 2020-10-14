@@ -1,6 +1,6 @@
 {
   "name": "netlify-cms-widget-pathname",
-  "version": "0.0.0",
+  "version": "1.2.4",
   "description": "netlify-cms widget to validate pathnames and display url's",
   "keywords": [
     "cms",
@@ -23,36 +23,37 @@
   "main": "lib/index.js",
   "scripts": {
     "build": "run-p build:*",
-    "build:demo": "webpack --display errors-only --devtool source-map --config webpack.dev.config.js",
-    "build:package": "babel src --out-dir lib --source-maps",
-    "clean": "rimraf public",
-    "format": "prettier --write '**/*.*' && sort-package-json",
+    "build:demo": "webpack --devtool source-map --config webpack.dev.config.js",
+    "build:package": "babel src --out-dir lib --source-maps --ignore *.test.js",
+    "clean": "rm -rf public",
+    "commit": "npx cz",
+    "dev": "webpack serve --config webpack.dev.config.js",
+    "format": "run-p format:*",
+    "format:package-json": "sort-package-json package.json",
+    "format:prettier": "prettier --write '**/*.*'",
     "lint": "run-p lint:*",
     "lint:js": "eslint .",
-    "lint:md": "markdownlint README.md",
-    "qa": "npm run lint",
-    "semantic-release": "semantic-release",
-    "start": "webpack-dev-server --config webpack.dev.config.js --https",
-    "try-demo": "run-s clean build:demo && serve public",
-    "upgrade-interactive": "npm-check --update"
+    "lint:md": "markdownlint-cli2 '**/*.md' '!node_modules' '!**/node_modules'",
+    "qa": "yarn lint",
+    "prerelease": "git checkout master && git pull && yarn",
+    "release": "run-s clean build qa && standard-version --no-verify && git push --follow-tags origin master --no-verify && yarn publish",
+    "try": "run-s clean build:demo && serve public"
   },
   "husky": {
     "hooks": {
       "pre-commit": "lint-staged",
-      "pre-push": "npm run qa"
+      "pre-push": "yarn qa"
     }
   },
   "lint-staged": {
     "*.js": [
-      "eslint --fix",
-      "git add"
+      "eslint --fix"
     ],
-    "*.{md,json,babelrc}": [
+    "*.{md,json,yml}": [
       "pretty-quick --staged"
     ],
     "package.json": [
-      "sort-package-json",
-      "git add"
+      "sort-package-json"
     ]
   },
   "config": {
@@ -61,40 +62,38 @@
     }
   },
   "dependencies": {
-    "netlify-cms-ui-default": "^2.6.4",
+    "netlify-cms-ui-default": "2.11.6",
     "prop-types": "^15.7.2"
   },
   "devDependencies": {
-    "@babel/cli": "^7.6.0",
-    "@babel/core": "^7.6.0",
-    "@babel/plugin-proposal-class-properties": "^7.5.5",
-    "@babel/preset-env": "^7.6.0",
-    "@babel/preset-react": "^7.0.0",
-    "@k.sh/eslint-config": "^1.13.0",
-    "babel-eslint": "^10.0.3",
-    "babel-loader": "^8.0.6",
-    "cross-env": "^5.2.1",
-    "css-loader": "^3.2.0",
-    "cz-conventional-changelog": "^3.0.2",
-    "html-webpack-plugin": "^3.2.0",
-    "husky": "^3.0.5",
-    "lint-staged": "^9.2.5",
-    "markdownlint-cli": "^0.18.0",
-    "netlify-cms": "^2.9.7",
-    "npm-check": "^5.9.0",
+    "@babel/cli": "^7.12.0",
+    "@babel/core": "^7.12.0",
+    "@babel/plugin-proposal-class-properties": "^7.10.4",
+    "@babel/preset-env": "^7.12.0",
+    "@babel/preset-react": "^7.10.4",
+    "@k.sh/eslint-config": "^1.18.1",
+    "babel-eslint": "^10.1.0",
+    "babel-loader": "^8.1.0",
+    "cross-env": "^7.0.2",
+    "css-loader": "^5.0.0",
+    "cz-conventional-changelog": "^3.3.0",
+    "html-webpack-plugin": "^4.5.0",
+    "husky": "^4.3.0",
+    "lint-staged": "^10.4.0",
+    "markdownlint-cli2": "0.0.10",
+    "netlify-cms": "^2.10.63",
     "npm-run-all": "^4.1.5",
-    "prettier": "^1.18.2",
-    "pretty-quick": "^1.11.1",
-    "react": "^16.9.0",
-    "rimraf": "^3.0.0",
-    "semantic-release": "^15.13.24",
-    "serve": "^11.1.0",
-    "sort-package-json": "^1.22.1",
-    "source-map-loader": "^0.2.4",
-    "style-loader": "^1.0.0",
-    "webpack": "^4.39.3",
-    "webpack-cli": "^3.3.8",
-    "webpack-dev-server": "^3.8.0"
+    "prettier": "^2.1.2",
+    "pretty-quick": "^3.1.0",
+    "react": "^16.14.0",
+    "serve": "^11.3.2",
+    "sort-package-json": "^1.46.0",
+    "source-map-loader": "^1.1.1",
+    "standard-version": "^9.0.0",
+    "style-loader": "^2.0.0",
+    "webpack": "^5.1.0",
+    "webpack-cli": "^4.0.0",
+    "webpack-dev-server": "^3.11.0"
   },
   "peerDependencies": {
     "netlify-cms": ">2.8",
