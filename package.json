@@ -62,7 +62,7 @@
     }
   },
   "dependencies": {
-    "netlify-cms-ui-default": "^2.6.4",
+    "netlify-cms-ui-default": "2.11.6",
     "prop-types": "^15.7.2"
   },
   "devDependencies": {
