@@ -1,6 +1,6 @@
 {
   "name": "netlify-cms-widget-pathname",
-  "version": "1.2.4",
+  "version": "1.2.5",
   "description": "netlify-cms widget to validate pathnames and display url's",
   "keywords": [
     "cms",
